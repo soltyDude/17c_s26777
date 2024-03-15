@@ -1,11 +1,6 @@
 import math
 
 
-class RangeError(Exception):
-    """Custom exception for invalid range."""
-    pass
-
-
 class SquareGenerator:
     def generate_squares(self, start, end):
         """
@@ -19,7 +14,8 @@ class SquareGenerator:
             list: A list of squares for the given range of numbers.
         """
         if end < start:
-            raise RangeError("End of the range must be greater than or equal to the start.")
+            print("Error: End of the range must be greater than or equal to the start.")
+            return None
 
         squares = [x ** 2 for x in range(start, end + 1)]
         return squares
