@@ -1,6 +1,3 @@
-import math
-
-
 class SquareGenerator:
     def generate_squares(self, start, end):
         """
@@ -13,11 +10,7 @@ class SquareGenerator:
         Returns:
             list: A list of squares for the given range of numbers.
         """
-        if end < start:
-            print("Error: End of the range must be greater than or equal to the start.")
-            return None
-
-        squares = [x ** 2 for x in range(start, end + 1)]
+        squares = [x**2 for x in range(start, end + 1)]
         return squares
 
     def calculate_square_roots(self, numbers):
@@ -30,5 +23,5 @@ class SquareGenerator:
         Returns:
             list: List of square roots of each number.
         """
-        square_roots = [math.sqrt(num) for num in numbers]
+        square_roots = [num**0.5 for num in numbers]
         return square_roots
