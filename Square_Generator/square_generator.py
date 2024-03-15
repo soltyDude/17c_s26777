@@ -1,4 +1,7 @@
-class SquareGenerator:
+from abc import ABC, abstractmethod
+
+class SquareGenerator(ABC):
+    @abstractmethod
     def generate_squares(self, start, end):
         """
         Generate a list of squares for a given range of numbers.
@@ -10,8 +13,7 @@ class SquareGenerator:
         Returns:
             list: A list of squares for the given range of numbers.
         """
-        squares = [x**2 for x in range(start, end + 1)]
-        return squares
+        pass
 
     def calculate_square_roots(self, numbers):
         """
