@@ -1,3 +1,5 @@
+import math
+
 class SquareGenerator:
     def generate_squares(self, start, end):
         """
@@ -13,17 +15,32 @@ class SquareGenerator:
         squares = [x**2 for x in range(start, end + 1)]
         return squares
 
+    def calculate_square_roots(self, numbers):
+        """
+        Calculate the square roots of each number in the list.
+
+        Parameters:
+            numbers (list): List of numbers.
+
+        Returns:
+            list: List of square roots of each number.
+        """
+        square_roots = [math.sqrt(num) for num in numbers]
+        return square_roots
+
 def main():
-    # Create an instance of the SquareGenerator class
     square_gen = SquareGenerator()
 
     start = int(input("Enter the start of the range: "))
     end = int(input("Enter the end of the range: "))
 
-    # Call the generate_squares method of the SquareGenerator instance
     squares = square_gen.generate_squares(start, end)
     print(f"List of squares from {start} to {end}:")
     print(squares)
+
+    square_roots = square_gen.calculate_square_roots(squares)
+    print("Square roots of each number:")
+    print(square_roots)
 
 if __name__ == "__main__":
     main()
